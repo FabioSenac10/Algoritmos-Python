@@ -43,7 +43,8 @@ elif cand2>cand1 and cand2>cand3:
 elif cand3>cand2 and cand3>cand1:
     print("Candidato 3 foi o campeão.")
 elif cand1==cand2:
-    print("Houve empate entre o candidato 1 e o candidato .")
-elif cand1==cand3:
     print("Houve empate entre o candidato 1 e o candidato 2.")
+elif cand1==cand3:
+    print("Houve empate entre o candidato 1 e o candidato 3.")
 else:
+    print("Houve empate entre o candidato 2 e o candidato 3.")
