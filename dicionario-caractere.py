@@ -75,3 +75,35 @@ aluno = {
     }
 }
 print(aluno.get ("fisica", "materia não encontrada"))
+
+########## Tratamento de excessão ####################
+# Try- testa o bloco/erro
+# Except- Trata o erro
+# Else- não deu erro
+# Finally- 
+
+a=int(input("Digite um texto: ")) # int só pode ser usado com números
+
+##### Try e except ######
+try:
+ a=int(input("Digite um texto: "))
+except:
+ print("Digite somente números ")
+
+##### MULTIPLAS EXECUÇÕES ######
+try:
+ a=int(input("Digite um texto: "))
+except ValueError:
+ print("Digite somente números")
+except:
+ print("Erro desconhecido")
+
+ ##### FINALLY  ########## executa mesmo com erro
+try:
+ a=int(input("Digite um texto: "))
+except ValueError:
+ print("Digite somente números")
+except:
+ print("Erro desconhecido")
+finally:
+ print("Final do algoritmo")
