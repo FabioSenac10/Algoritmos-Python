@@ -1,2 +1,0 @@
-# Algoritmos-Python
- Códigos

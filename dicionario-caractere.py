@@ -107,3 +107,64 @@ except:
  print("Erro desconhecido")
 finally:
  print("Final do algoritmo")
+
+ # 26/05
+ ############ OPEN ########################
+ #    r=leitura
+ f=open("file.txt", "r") # r- Abre um arquivopara leitura, o arquivo deve estar dentro da pasta
+ 
+ # a-Acrescentar, abre um arquivo para anexar, cria o arquivo se ele não existir
+ z=open("file.txt","a")
+z.write(", E NUNCA TERÁ.") # TEXTO A SER INCORPORADO
+z=open("file.txt", "r")
+print(z.read())
+z.close()
+######################################
+z=open("file.txt","a")
+x=input("DIGITE SEU NOME=- ")
+z.write(x) # TEXTO A SER INCORPORADO
+z=open("file.txt", "r")
+print(z.read())
+z.close()
+
+####################### "encoding="utf-8" ########################
+z=open("file.txt","a",encoding="utf-8" )
+z.write(", E NUNCA TERÁ.") # TEXTO A SER INCORPORADO
+z=open("file.txt", "r")
+print(z.read())
+z.close()
+
+#### W- Cria um arquivo ou subscreve o conteudo #####
+f=open("file.txt","w")
+
+###### x-Cria o arquivo , se ele existir ocorre ERRO #########
+f=open("file.txt","x")
+
+###### rt ######
+f=open("aaa.jpg","rt")
+print(f.read())
+
+########### WITH OPEN ##########
+with open("cadastro.txt","a")as x:
+    x.write("NovoCadastro\n")
+
+###### READLINE ######
+with open("cadastro.txt","r") as f:
+ linhas=f.readlines()
+ print(linhas[2]) # LINHA A SER PRINTADA
+
+####### WITH OPEN -BUSCAS ########
+with open("cadastro.txt","r") as f:
+ for linha in f:
+  if "joão" in linha.lower(): # BUSCA PELA PALAVRA JOÃO
+   print(linha)
+
+##### DELETAR LINHA-WITH OPEN ###########
+with open("cadastro.txt","r") as f:
+ linhas=f.readlines()
+ # REMOVE A LINHA 2(TERCEIRA LINHA)
+ print(linhas[2])
+ del linhas [2]
+ with open("cadastro.txt","w") as f:
+  f.writelines(linhas)
+
