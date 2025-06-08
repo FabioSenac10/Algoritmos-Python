@@ -73,11 +73,39 @@ else:
 
 
 # Crie uma função que inverta uma string.
+def inverter_string():
+    texto = input("Digite uma string: ")
+    texto_invertido = texto[::-1]
+    print("String invertida:", texto_invertido)
 
 # Crie uma função que receba uma lista de nomes e retorne apenas os nomes com mais de 5 letras.
+def nomes_digitados5letras():
+    lista = input("DIGITE OS NOMES SEPARADOS POR VIRGULA: ")
+    return [nome.strip() for nome in lista.split(",") if len(nome.strip()) > 5]
+
+print(nomes_digitados5letras())
+
 # Escreva uma função que conte quantas vogais há em uma string.
+def contar_vogais():
+    texto = input("Digite uma string: ")
+    vogais = "aeiouAEIOU"
+    contador = 0
+    for letra in texto:
+        if letra in vogais:
+            contador += 1
+    print("Quantidade de vogais:", contador)
+
 # Crie uma função que receba um número e retorne uma lista com todos os divisores dele.
+def divisores():
+    numero = int(input("Digite um número inteiro: "))
+    lista_divisores = []
+    for i in range(1, numero + 1):
+        if numero % i == 0:
+            lista_divisores.append(i)
+    print(f"Divisores de {numero}: {lista_divisores}")
+
 # Crie uma função que converta graus Celsius para Fahrenheit.
+def celsius_para_fahrenheit()
 # Crie uma função que receba uma string e retorne a mesma string sem espaços.
 # Crie uma função que receba uma lista e retorne a média dos elementos.
 # Escreva uma função que receba uma palavra e retorne True se ela for um palíndromo.
