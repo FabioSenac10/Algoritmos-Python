@@ -1,7 +1,8 @@
-def soma_digitos(numero):
-   n= int(input("Digite um número inteiro: "))
-   soma = 0
-   for digito in str(n):
-       soma += int(digito)
-   return soma
-print("A soma dos dígitos é:", soma_digitos(0))
+def elementos_unicos(lista):
+    unicos = []
+    for item in lista:
+        if item not in unicos:
+            unicos.append(item)
+    return unicos
+lista = input("Digite os elementos da lista separados por vírgula: ").split(",")
+print("Elementos únicos:", elementos_unicos(lista))

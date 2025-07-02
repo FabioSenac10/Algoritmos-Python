@@ -186,12 +186,43 @@ def soma_digitos(numero):
 print("A soma dos dígitos é:", soma_digitos(0))
 
 # Escreva uma função que receba uma frase e retorne a quantidade de palavras.
-
+def contar_palavras(frase):
+    if not frase:
+        return 0
+    frase = frase.strip()
+    palavras = frase.split()
+    return len(palavras)
+frase_digitada = input("Digite uma frase: ")
+print("Quantidade de palavras:", contar_palavras(frase_digitada))
 
 # Crie uma função que substitua todas as vogais de uma string por "*".
+def substituir_vogais(frase):
+    vogais = "aeiouAEIOU"
+    for vogal in vogais:
+        frase = frase.replace(vogal, "*")
+    return frase
+frase_digitada = input("Digite uma frase: ")
+print("Frase com vogais substituídas:", substituir_vogais(frase_digitada))
 
 # Crie uma função que receba uma lista e retorne os elementos únicos (sem usar set).
+def elementos_unicos(lista):
+    unicos = []
+    for item in lista:
+        if item not in unicos:
+            unicos.append(item)
+    return unicos
+lista = input("Digite os elementos da lista separados por vírgula: ").split(",")
+print("Elementos únicos:", elementos_unicos(lista))
+
 # Crie uma função que receba uma lista e um número n, e retorne os n maiores valores da lista.
+def n_maiores(lista, n):
+    if n > len(lista):
+        return "O valor de n é maior que o tamanho da lista."
+    lista_ordenada = sorted(lista, reverse=True)
+    return lista_ordenada[:n]
+lista_numeros = input("Digite os números separados por vírgula: ").split(",")
+print("Os 3 maiores números são:", n_maiores(lista_numeros, 3))
+
 # Escreva uma função que calcule a área de um triângulo (base × altura ÷ 2).
 # Crie uma função recursiva para calcular o fatorial de um número.
 # Crie uma função recursiva que calcule o n-ésimo número da sequência de Fibonacci.
